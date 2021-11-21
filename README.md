@@ -47,7 +47,7 @@ Todos los parametros son opcionales
 
 Para solucionar este requerimiento lo primero que debemoas hacer el extender el diagrama de la db, creando un tabla donde almacenaremos los "Me Gusta" de cada usuario por prpiedades y lo vamos a hacer d ela siguiente manera:
 
-`create table i_like_property(
+```create table i_like_property(
 	id INT NOT NULL AUTO_INCREMENT,
 	property_id int(11) not null,
     user_id int(11) not null,
@@ -56,32 +56,32 @@ Para solucionar este requerimiento lo primero que debemoas hacer el extender el 
     REFERENCES `property`(`id`),
     CONSTRAINT `i_like_property_user_id_fk` FOREIGN KEY (`user_id`) 
     REFERENCES `auth_user` (`id`)    
-)`
+)```
 
 ## Sentencias SQL
 
-**Registrar un me gusta**: `insert into i_like_property(property_id, user_id)values(%id propiedad%, %id_user%)`
+**Registrar un me gusta**: ```insert into i_like_property(property_id, user_id)values(%id propiedad%, %id_user%)```
 
 
-**Eliminar un me gusta**: `delete from i_like_property where user_id=%user_id% and property_id=%property_id% limit 1`
+**Eliminar un me gusta**: ```delete from i_like_property where user_id=%user_id% and property_id=%property_id% limit 1`
 
 
-**Consultar la cantidad de me gusta de un inmueble**: `select count(id) from i_like_property where property_id=%property_id%`
+**Consultar la cantidad de me gusta de un inmueble**: ```select count(id) from i_like_property where property_id=%property_id%```
 
 
 **Consultar informacion de los me gusta de un inmueble**: 
-`select i.id, concat(u.first_name, ' ', u.last_name) as user,
+```select i.id, concat(u.first_name, ' ', u.last_name) as user,
 i.user_id, u.email
 from i_like_property as i
 inner join auth_user as u on u.id=i.user_id
-where property_id=%property_id%`
+where property_id=%property_id%```
 
 
 **Consultar los me gusta por usuarios**: 
-`select i.id, p.address, p.city, p.privce, p.descripcion, p.year, i.property_id
+```select i.id, p.address, p.city, p.privce, p.descripcion, p.year, i.property_id
 from i_like_property as i
 inner join property as p on p.id=i.property_id
-where i.user_id=%user_id%`
+where i.user_id=%user_id%```
 
 
 
