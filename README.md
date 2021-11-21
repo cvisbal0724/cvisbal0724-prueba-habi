@@ -62,10 +62,11 @@ Para solucionar este requerimiento lo primero que debemoas hacer el extender el 
     REFERENCES `auth_user` (`id`)    
 )
 `
+```
 
+## Sentencias SQL
 
-// Sentencias SQL
-
+```
 // Registrar un me gusta
 
 `insert into i_like_property(property_id, user_id)values(%id propiedad%, %id_user%)`
