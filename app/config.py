@@ -5,7 +5,7 @@ class DevelopmentSetting(Config):
     DEBUG = True
 
 setting = {
-    'develop': DevelopmentSetting,
+    'development': DevelopmentSetting,
     'default': DevelopmentSetting
 }
                 

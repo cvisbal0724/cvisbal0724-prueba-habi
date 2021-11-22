@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from controllers.property import routeProperty
+from .config import setting
 
 app = Flask(__name__)
 
@@ -12,3 +13,4 @@ def initializateApp(setting):
     app.config.from_object(setting)
     return app
     
+app = initializateApp(setting['development'])

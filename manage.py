@@ -1,9 +1,9 @@
 from flask_script import Manager
 from flask_script.commands import Server
 from app import initializateApp
-from app.settings import setting
+from app.config import setting
 
-configuration = setting['develop']
+configuration = setting['development']
 app = initializateApp(configuration)
 
 manager = Manager(app)

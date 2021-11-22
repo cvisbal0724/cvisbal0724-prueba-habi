@@ -123,29 +123,29 @@ where i.user_id=%user_id%`
 * python manage.py runserver
 
 
-# Run unitest
+# Run unittest
 
-* python test/test/test_property.py TestProperty.get_by_year
-
-
-* python test/test/test_property.py TestProperty.get_by_status
+* python test/test_property.py TestProperty.get_by_year
 
 
-* python test/test/test_property.py TestProperty.get_by_city
+* python test/test_property.py TestProperty.get_by_status
 
 
-* python test/test/test_property.py TestProperty.get_by_year_and_status
+* python test/test_property.py TestProperty.get_by_city
 
 
-* python test/test/test_property.py TestProperty.get_by_status_and_city 
+* python test/test_property.py TestProperty.get_by_year_and_status
 
 
-* python test/test/test_property.py TestProperty.get_by_year_and_city
+* python test/test_property.py TestProperty.get_by_status_and_city 
 
 
-* python test/test/test_property.py TestProperty.get_by_status_year_and_city
+* python test/test_property.py TestProperty.get_by_year_and_city
 
 
-# microservicio
+* python test/test_property.py TestProperty.get_by_status_year_and_city
+
+
+# Microservicio
 
 * http://localhost:8100
