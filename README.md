@@ -28,21 +28,21 @@ Cree la consulta con select anidados
 
 # Valores recibidos en el primer requerimiento
 
-Se espera recibir un queryparams de la siguiente manera:
+## Se espera recibir un queryparams de la siguiente manera:
 
 
-* Ejemplo.
+Ejemplo:
 
 
-* http://localhost:8100/property/?year=2010,2011,2012&status=2,3,4&cirty=bogota
+http://localhost:8100/property?year=2010,2011,2012&status=2,3,4&city=bogota
 
 Todos los parametros son opcionales
 
-**year**: rebibe 1 o varios años concatenados con comas.
+**year**: recibe 1 o varios años concatenados con comas.
 
-**status**: rebibe 1 o varios estados concatenados con comas.
+**status**: recibe 1 o varios estados concatenados con comas.
 
-**city**: rebibe un nombre de por lo menos unas ciudad que exista en la base de datos.
+**city**: recibe un nombre de por lo menos unas ciudad que exista en la base de datos.
 
 
 # Requerimiento 2 de funcionalidad de **Me Gusta**
