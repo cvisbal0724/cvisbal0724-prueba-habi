@@ -5,7 +5,7 @@ from .config import setting
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.register_blueprint(routeProperty, url_prefix="/")
 
