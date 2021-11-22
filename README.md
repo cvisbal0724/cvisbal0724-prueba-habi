@@ -31,10 +31,10 @@ Cree la consulta con select anidados
 Se espera recibir un queryparams de la siguiente manera:
 
 
-Ejemplo.
+* Ejemplo.
 
 
-/property/?year=2010,2011,2012&status=2,3,4&cirty=bogota
+* http://localhost:8100/property/?year=2010,2011,2012&status=2,3,4&cirty=bogota
 
 Todos los parametros son opcionales
 
@@ -145,7 +145,3 @@ where i.user_id=%user_id%`
 
 * python test/test_property.py TestProperty.get_by_status_year_and_city
 
-
-# Microservicio
-
-* http://localhost:8100
