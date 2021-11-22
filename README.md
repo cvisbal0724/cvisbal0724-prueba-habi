@@ -71,17 +71,17 @@ Para solucionar este requerimiento lo primero que debemoas hacer el extender el 
 ```
 // Registrar un me gusta
 
-`insert into i_like_property(property_id, user_id)values(%id propiedad%, %id_user%)`
+`insert into i_like_property(property_id, user_id)values({id propiedad}, {id_user})`
 
 
 // Eliminar un me gusta
 
-`delete from i_like_property where user_id=%user_id% and property_id=%property_id% limit 1`
+`delete from i_like_property where user_id={user_id} and property_id={property_id} limit 1`
 
 
 // Consultar la cantidad de me gusta de un inmueble
 
-`select count(id) from i_like_property where property_id=%property_id%`
+`select count(id) from i_like_property where property_id={property_id}`
 
 
 // Consultar informacion de los me gusta de un inmueble
@@ -90,7 +90,7 @@ Para solucionar este requerimiento lo primero que debemoas hacer el extender el 
 i.user_id, u.email
 from i_like_property as i
 inner join auth_user as u on u.id=i.user_id
-where property_id=%property_id%`
+where property_id={property_id}`
 
 
 // Consultar los me gusta por usuarios
@@ -98,7 +98,7 @@ where property_id=%property_id%`
 `select i.id, p.address, p.city, p.privce, p.descripcion, p.year, i.property_id
 from i_like_property as i
 inner join property as p on p.id=i.property_id
-where i.user_id=%user_id%`
+where i.user_id={user_id}`
 
 ```
 
