@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-app.register_blueprint(routeProperty, url_prefix="/property")
+app.register_blueprint(routeProperty, url_prefix="/")
 
 def initializateApp(setting):
     app.config.from_object(setting)

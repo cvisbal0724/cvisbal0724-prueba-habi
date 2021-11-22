@@ -2,6 +2,8 @@
 
 # Tecnologias a utilizar en la prueba
 
+**Version de python**: 3.7
+
 **PyMySQL**: Lo utilizare para conectar la base de datos
 
 **Flask**: Lo utilizare para la creación de los endpoint solicitados
@@ -101,4 +103,49 @@ where i.user_id=%user_id%`
 ```
 
 
+# Mejoras en la estructura y redimiento de la base de datos
 
+## Mejorar el tiempo de respuesta de las consultas de propiedades
+
+* Agregar el ultimo estado actualizado a la tabla property
+
+## Mejora de la estructura
+
+* Crear una tabla ciudad y departamento y relacionarla a las propiedades para saber su ubicacion y que no haya confuciones ya que hay muchas ciudades o municpios que pueden tener el mismo el mismo nombre o parecidos o se puedan equivocar en la escritura.
+
+* Aparte de la dirección seria bueno agregar las coordenadas (latitud y longitud) de las propiedad para saber su ubicacion real y porder localizarlas en un mapa, dar sugerencias a un usuario que propiedades tiene cerca a su ubucac ion actual o a algun punto seleccionado.
+
+* Agregar fotos de los inmuebles
+
+
+# Run project
+
+* python manage.py runserver
+
+
+# Run unitest
+
+* python test/test/test_property.py TestProperty.get_by_year
+
+
+* python test/test/test_property.py TestProperty.get_by_status
+
+
+* python test/test/test_property.py TestProperty.get_by_city
+
+
+* python test/test/test_property.py TestProperty.get_by_year_and_status
+
+
+* python test/test/test_property.py TestProperty.get_by_status_and_city 
+
+
+* python test/test/test_property.py TestProperty.get_by_year_and_city
+
+
+* python test/test/test_property.py TestProperty.get_by_status_year_and_city
+
+
+# microservicio
+
+* http://localhost:8100
